@@ -30,9 +30,8 @@ h1, h2, h3 {
 }
 
 a {
-  color: var(--accent-color);
+  color: #2b6cb0;
   text-decoration: none;
-  font-weight: bold;
 }
 
 a:hover {
