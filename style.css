@@ -63,14 +63,15 @@ table {
 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 
+}
+
+
   tr:nth-child(even) {
   background-color: #f5f7fb;
 }
 
 tr:hover {
-  background-color: #dce9ff;
-}
-}
+  background-color: #dce9ff;}
 
 th {
   background: var(--theme-color);
