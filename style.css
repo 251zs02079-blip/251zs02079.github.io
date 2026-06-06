@@ -3,7 +3,9 @@
 -------------------- */
 
 :root {
-  --theme-color: #00a0a0;
+  --theme-color: #1e3a5f;
+  --sub-color: #f4f7fb;
+  --accent-color: #ffb703;
 }
 
 * {
@@ -18,7 +20,10 @@ html, body {
 body {
   margin: 0;
   padding: 30px;
-  color: #324851;
+  color: #333;
+  background-color: var(--sub-color);
+  font-family: "Yu Gothic", sans-serif;
+  line-height: 1.8;
 }
 
 /* --------------------
@@ -27,7 +32,9 @@ body {
 
 h1, h2, h3 {
   color: var(--theme-color);
-  border-bottom: dashed 0.1em var(--theme-color);
+  border-left: 8px solid var(--accent-color);
+  padding-left: 10px;
+  border-bottom: none;
 }
 
 /* --------------------
@@ -35,8 +42,13 @@ h1, h2, h3 {
 -------------------- */
 
 a {
-  color: var(--theme-color);
+  color: var(--accent-color);
   text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* --------------------
@@ -45,10 +57,17 @@ a {
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
-li:before {
-  content: "★";
-  color: var(--theme-color);
+
+li {
+  margin: 8px 0;
+}
+
+li::before {
+  content: "▶ ";
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
 /* --------------------
@@ -56,22 +75,26 @@ li:before {
 -------------------- */
 
 table {
-  border-spacing: 0;
   border-collapse: collapse;
-  border: solid 1px #f0f0f0;
   min-width: 70%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-tr {
-  background-color: #fff;
-}
-tr:nth-child(2n) {
-  background-color: #f9f9f9;
-}
+
 th {
   background: var(--theme-color);
-  color: #fff;
+  color: white;
 }
-th, td {
-  border: solid 1px #7DA3A1;
-  padding: 0.5rem;
+
+tr:nth-child(even) {
+  background-color: #eef3f8;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #d0d7de;
+  text-align: left;
 }
