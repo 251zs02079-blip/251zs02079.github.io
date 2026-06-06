@@ -6,10 +6,6 @@
   --shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-body {
-  background: red;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -20,25 +16,16 @@ body {
   font-family: "Yu Gothic", sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.8;
 }
-body {
+
+.container {
   max-width: 900px;
   margin: 0 auto;
 }
 
 h1 {
-  font-size: 2.5rem;
   text-align: center;
   color: var(--theme-color);
-  margin-bottom: 10px;
-}
-
-h2, h3 {
-  color: var(--theme-color);
-  border-left: 6px solid var(--theme-color);
-  padding-left: 10px;
-  margin-top: 40px;
 }
 
 img {
@@ -51,12 +38,6 @@ img {
 a {
   color: var(--theme-color);
   text-decoration: none;
-  transition: 0.2s;
-}
-
-a:hover {
-  color: #1e4f86;
-  text-decoration: underline;
 }
 
 ul {
@@ -74,29 +55,17 @@ li {
 
 table {
   width: 100%;
-  border-collapse: collapse;
   background: var(--card);
   box-shadow: var(--shadow);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 10px;
+  border-collapse: collapse;
 }
 
 th {
   background: var(--theme-color);
   color: white;
   padding: 12px;
-  text-align: left;
 }
 
 td {
   padding: 12px;
-  border-bottom: 1px solid #eee;
-}
-
-iframe {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  margin-top: 10px;
 }
