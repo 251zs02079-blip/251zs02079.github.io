@@ -1,100 +1,98 @@
-/* --------------------
-        全体
--------------------- */
-
 :root {
-  --theme-color: #1e3a5f;
-  --sub-color: #f4f7fb;
-  --accent-color: #ffb703;
+  --theme-color: #2b6cb0;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #333;
+  --shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
 body {
   margin: 0;
-  padding: 30px;
-  color: #333;
-  background-color: var(--sub-color);
+  padding: 40px 20px;
   font-family: "Yu Gothic", sans-serif;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.8;
 }
-
-/* --------------------
-        見出し
--------------------- */
-
-h1, h2, h3 {
-  color: var(--theme-color);
-  border-left: 8px solid var(--accent-color);
-  padding-left: 10px;
-  border-bottom: none;
+body {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* --------------------
-        リンク
--------------------- */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--theme-color);
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  color: var(--theme-color);
+  border-left: 6px solid var(--theme-color);
+  padding-left: 10px;
+  margin-top: 40px;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
 
 a {
-  color: var(--accent-color);
+  color: var(--theme-color);
   text-decoration: none;
-  font-weight: bold;
+  transition: 0.2s;
 }
 
 a:hover {
+  color: #1e4f86;
   text-decoration: underline;
 }
 
-/* --------------------
-        リスト
--------------------- */
-
 ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
 li {
-  margin: 8px 0;
+  background: var(--card);
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
-
-li::before {
-  content: "▶ ";
-  color: var(--accent-color);
-  font-weight: bold;
-}
-
-/* --------------------
-          表
--------------------- */
 
 table {
+  width: 100%;
   border-collapse: collapse;
-  min-width: 70%;
-  background: white;
-  border-radius: 8px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 
 th {
   background: var(--theme-color);
   color: white;
+  padding: 12px;
+  text-align: left;
 }
 
-tr:nth-child(even) {
-  background-color: #eef3f8;
-}
-
-th,
 td {
   padding: 12px;
-  border: 1px solid #d0d7de;
-  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+iframe {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-top: 10px;
 }
